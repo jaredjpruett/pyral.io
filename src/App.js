@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
+import Tabs from './components/Tabs'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tabs : [ "Info", "Projects", "Hosted" ],
+      currentTab : 0,
+    };
+  }
+
+  setCurrentTab(newCurrentTab) {
+    //debugger;
+    this.setState((state, props) => {
+        //debugger;
+        //return {currentTab : newCurrentTab};
+        return { tabs: state.tabs, currentTab: newCurrentTab };
+        // return {state, props};
+      }
+    );
+  }
+
+  render() {
+    //debugger;
+    return (
+      <div>
+        <Tabs
+          tabs={this.state.tabs}
+          onClick={(index) => this.setCurrentTab(index)}
+        />
+        <div>state: {this.state.currentTab}</div>
+      </div>
+    );
+  }
 }
 
 export default App;
