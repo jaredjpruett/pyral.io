@@ -1,7 +1,7 @@
-.Tabs {
+.Content {
   margin: auto;
   width: 50%;
-  border: 2px solid green;
+  border: 2px solid yellow;
   padding: 5px;
   text-align: center;
 }
