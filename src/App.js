@@ -28,9 +28,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Tabs tabs={this.state.tabs} onClick={(index)=>this.setCurrentTab(index)}/>
-        <Content content={this.state.tabContents[this.state.currentTab]}/>
+      //<Content content={this.state.tabContents[this.state.currentTab]}/>
+      <div className="div-root">
+				<div className="div-left">
+					<Tabs tabs={this.state.tabs} onClick={(index)=>this.setCurrentTab(index)}/>
+				</div>
+				<div className="div-right">
+					<Content content="projects"/>
+					<Content content="hosted projects"/>
+				</div>
       </div>
     );
   }
