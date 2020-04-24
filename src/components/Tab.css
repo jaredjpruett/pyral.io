@@ -1,5 +1,4 @@
 .Tab {
-  display: inline;
-  border: 2px solid blue;
-  padding: 5px;
+    border: 2px solid blue;
+    display: inline;
 }

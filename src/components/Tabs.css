@@ -1,15 +1,15 @@
 .Tabs {
-  display: flex;
-  flex-direction: column;
-	text-align: left;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 /*
 .Tabs {
-  margin: auto;
-  width: 50%;
-  border: 2px solid green;
-  padding: 5px;
-  text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 5px;
+    text-align: center;
 }
 */
