@@ -6,7 +6,7 @@
 
 .div-left {
     display: flex;
-    flex: 0 0 5%;
+    flex: 0 0 3%;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -14,7 +14,7 @@
 
 .div-right {
     display: flex;
-    flex: 0 0 95%;
+    flex: 0 0 97%;
     flex-direction: column;
     text-align: center;
     justify-content: right;

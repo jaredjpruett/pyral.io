@@ -1,2 +1,12 @@
 .Content {
 }
+
+.Tiles {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.Tile {
+    padding: 5px;
+}
