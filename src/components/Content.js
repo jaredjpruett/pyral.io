@@ -5,7 +5,7 @@ class Content extends React.Component {
     render() {
         const renderTiles = this.props.tiles.map((tile, index) => 
             <div className="Tile" key={index}>
-                {tile}
+                <img src={this.props.images[index]} alt="img"/>
             </div>
         );
 

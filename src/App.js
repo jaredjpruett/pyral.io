@@ -1,9 +1,9 @@
 import React from 'react';
-import Tabs from './components/Tabs'
-import Content from './components/Content'
-import iconLinkedIn from './img/linkedin.svg'
-import iconGitHub from './img/github.svg'
-import iconMail from './img/mail.svg'
+import Tabs from './components/Tabs';
+import Content from './components/Content';
+import iconLinkedIn from './img/linkedin.svg';
+import iconGitHub from './img/github.svg';
+import iconMail from './img/mail.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -27,8 +27,10 @@ class App extends React.Component {
             //icons : [ 'iconLinkedIn', 'iconGitHub', 'iconMail' ],
             icons : [ iconLinkedIn, iconGitHub, iconMail ],
             links : [ "https://linkedin.com/in/jaredjpruett", "https://github.com/jaredjpruett", "/" ],
-            projs : [ "1", "2", "3", "4", "5" ],
-            hosts : [ "1", "2", "3", "4", "5" ],
+            projects : [ "1", "2", "3", "4", "5" ],
+            projectsImgs : [ "project.png", "project.png", "project.png", "project.png", "project.png" ],
+            hosted : [ "1", "2", "3", "4", "5" ],
+            hostedImgs : [ "project.png", "project.png", "project.png", "project.png", "project.png" ],
         };
     }
 
@@ -47,8 +49,8 @@ class App extends React.Component {
                     <Tabs tabs={this.state.tabs} icons={this.state.icons} links={this.state.links}/>
                 </div>
                 <div className="div-right">
-                    <Content content="Projects" tiles={this.state.projs}/>
-                    <Content content="Hosted Projects" tiles={this.state.hosts}/>
+                    <Content content="Projects" tiles={this.state.projects} images={this.state.projectsImgs}/>
+                    <Content content="Hosted Projects" tiles={this.state.hosted} images={this.state.hostedImgs}/>
                 </div>
             </div>
         );
