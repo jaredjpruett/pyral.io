@@ -29,8 +29,7 @@ class App extends React.Component {
             links : [ "https://linkedin.com/in/jaredjpruett", "https://github.com/jaredjpruett", "/" ],
             projects : [ "1", "2", "3", "4", "5" ],
             projectsImgs : [ "project.png", "project.png", "project.png", "project.png", "project.png" ],
-            hosted : [ "1", "2", "3", "4", "5" ],
-            hostedImgs : [ "project.png", "project.png", "project.png", "project.png", "project.png" ],
+            projectsWebms : [ "project.webm", "project.webm", "project.webm", "project.webm", "project.webm" ],
         };
     }
 
@@ -49,8 +48,8 @@ class App extends React.Component {
                     <Tabs tabs={this.state.tabs} icons={this.state.icons} links={this.state.links}/>
                 </div>
                 <div className="div-right">
-                    <Content content="Projects" tiles={this.state.projects} images={this.state.projectsImgs}/>
-                    <Content content="Hosted Projects" tiles={this.state.hosted} images={this.state.hostedImgs}/>
+                    <Content content="Projects" tiles={this.state.projects} images={this.state.projectsImgs} webms={this.state.projectsWebms}/>
+                    <Content content="Hosted Projects" tiles={this.state.projects} images={this.state.projectsImgs} webms={this.state.projectsWebms}/>
                 </div>
             </div>
         );
