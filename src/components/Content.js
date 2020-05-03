@@ -4,8 +4,8 @@ import iconGitHub from '../img/github.svg';
 import './Content.css';
 
 class Content extends React.Component {
-    constructor () {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             showModal : false,
