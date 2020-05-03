@@ -11,28 +11,21 @@ class App extends React.Component {
         super(props);
 
         this.state = {
-            icons : [ iconLinkedIn, iconGitHub, iconMail ],
-            links : [ "https://linkedin.com/in/jaredjpruett", "https://github.com/jaredjpruett", "/" ],
-
-            showModal : false,
             modalRef : null, 
 
+            icons : [ iconLinkedIn, iconGitHub, iconMail ],
+            links : [ "https://linkedin.com/in/jaredjpruett", "https://github.com/jaredjpruett", "/" ],
             projects : [
-                { name : "Clocker", image : "clocker.png", webm : "clocker.webm" },
-                { name : "Project2", image : "project2.png", webm : "project2.webm" },
-                { name : "Project3", image : "project3.png", webm : "project3.webm" },
-                { name : "Project4", image : "project4.png", webm : "project4.webm" },
-                { name : "Project5", image : "project5.png", webm : "project5.webm" },
-            ],
-
-            hostedsURLs : [ "pyral.io/stuff/projects/clocker/index.html" ],
-            hosteds : [
-                { name : "Clocker", image : "clocker.png", webm : "clocker.webm" },
+                { name : "Clocker", image : "clocker.png", webm : "clocker.webm", repo : "cs-clocker", url : "pyral.io/stuff/projects/clocker/index.html" },
+                { name : "Cygwin + Eclipse Installer", image : "project2.png", webm : "project2.webm", repo : "cygwin-plus-eclipse-installer" },
+                { name : "NeoPlayer", image : "project3.png", webm : "project3.webm", repo : "neoplayer2" },
+                { name : "ICU+", image : "project4.png", webm : "project4.webm", repo : "icu" },
+                { name : "OpenOSRS Plugins", image : "project5.png", webm : "project5.webm", repo : "openosrs-plugins" },
             ],
         };
     }
 
-    handleFoo(node) {
+    handleModal(node) {
         this.setState({ modalRef : node });
     }
 
@@ -43,8 +36,7 @@ class App extends React.Component {
                     <Tabs icons={this.state.icons} links={this.state.links}/>
                 </div>
                 <div id="div-right">
-                    <Content content="Projects" tiles={this.state.projects} onTileClick={(node) => this.handleFoo(node)}/>
-                    <Content content="Hosted Projects" tiles={this.state.hosteds}/>
+                    <Content content="" tiles={this.state.projects} onTileClick={(node) => this.handleModal(node)}/>
                 </div>
             </div>
         );

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactModal from 'react-modal';
+import iconGitHub from '../img/github.svg';
 import './Content.css';
 
 class Content extends React.Component {
@@ -10,21 +11,14 @@ class Content extends React.Component {
             showModal : false,
             currentProject : {},
         };
-
-        /*
-        this.handleOpenModal    = this.handleOpenModal.bind(this);
-        this.handleCloseModal   = this.handleCloseModal.bind(this);
-        //this.setWrapperRef      = this.setWrapperRef.bind(this);
-        this.handleClickOutside = this.handleClickOutside.bind(this);
-        this.closeOnEscape      = this.closeOnEscape.bind(this);
-        */
     }
 
-    //setWrapperRef(node)    { this.wrapperRef = node; }
-    handleOpenModal(project)      { this.setState({ showModal: true, currentProject : project }); }
-    handleCloseModal(event)     { console.log(event); this.setState({ showModal: false }); }
-    componentDidMount()    { document.addEventListener('mousedown', (event)=>this.handleCloseModal(event)); document.addEventListener("keydown", this.closeOnEscape); }
-    componentWillUnmount() { document.removeEventListener('mousedown', (event)=>this.handleCloseModal(event)); document.removeEventListener("keydown", this.closeOnEscape); }
+    handleOpenModal(project) { this.setState({ showModal: true, currentProject : project }); }
+    handleCloseModal(event)  { this.setState({ showModal: false }); }
+    //componentDidMount()      { document.addEventListener('mousedown', (event)=>this.handleCloseModal(event)); document.addEventListener("keydown", this.closeOnEscape); }
+    //componentWillUnmount()   { document.removeEventListener('mousedown', (event)=>this.handleCloseModal(event)); document.removeEventListener("keydown", this.closeOnEscape); }
+    componentDidMount()      { document.addEventListener("keydown", (event)=>this.closeOnEscape(event)); }
+    componentWillUnmount()   { document.removeEventListener("keydown", (event)=>this.closeOnEscape(event)); }
 
     handleClickOutside(event) {
         if(this.wrapperRef && !this.wrapperRef.contains(event.target) && this.state.showModal && event.button === 0) {
@@ -33,7 +27,7 @@ class Content extends React.Component {
     }
 
     closeOnEscape(event) {
-        if(this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+        if(this.state.showModal) {
             event = event || window.event;
             if(event.keyCode === 27 && this.state.showModal) {
                 this.handleCloseModal();
@@ -49,7 +43,10 @@ class Content extends React.Component {
                         <source src={project.webm} type="video/webm"/>
                     </video>
                 </div>
-                <div>
+                <div className="repo-link">
+                    <a href={`https://github.com/jaredjpruett/${project.repo}`} target="_blank" rel="noopener noreferrer">
+                        <img src={iconGitHub} alt="icon"/>
+                    </a>
                     {project.name}
                 </div>
             </ReactModal>

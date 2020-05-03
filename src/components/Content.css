@@ -8,11 +8,12 @@
 }
 
 .Tile {
+    padding: 10px;
 }
 
 Img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .content-modal {
@@ -20,4 +21,8 @@ Img {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.repo-link {
+    height: 20px;
 }
