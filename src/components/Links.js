@@ -1,11 +1,11 @@
 import React from 'react';
-import Tab from './Tab';
+import Link from './Link';
 import iconLinkedIn from '../img/linkedin.svg';
 import iconGitHub from '../img/github.svg';
 import iconMail from '../img/mail.svg';
-import './Tabs.css';
+import './Links.css';
 
-class Tabs extends React.Component {
+class Links extends React.Component {
     constructor(props) {
         super(props);
 
@@ -16,16 +16,16 @@ class Tabs extends React.Component {
     }
 
     render() {
-        const renderTabs = this.state.icons.map((icon, index) => 
-            <div className="Tab" key={index}>
+        const renderLinks = this.state.icons.map((icon, index) => 
+            <div className="Link" key={index}>
                 <a href={this.state.links[index]} target="_blank" rel="noopener noreferrer">
-                    <Tab icon={icon}/>
+                    <Link icon={icon}/>
                 </a>
             </div>
         );
 
-        return <div className="Tabs">{renderTabs}</div>
+        return <div className="Links">{renderLinks}</div>
     }
 }
 
-export default Tabs
+export default Links
