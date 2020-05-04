@@ -1,13 +1,8 @@
 .Content {
 }
 
-.Tiles {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: 33% 33% 33%;
-}
-
 .Tile {
+    flex: 0 0 29%;
     padding: 20px;
 }
 
@@ -32,18 +27,16 @@ Img {
     height: 20px;
 }
 
-li::after {
-    content: ' •';
-}
-
 ul {
     list-style: none;
     text-align: center;
 }
-
 li {
     display: inline-block;
     margin: 0 8px;
+}
+li::after {
+    content: ' •';
 }
 
 .image-container {
