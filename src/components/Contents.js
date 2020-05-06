@@ -24,7 +24,7 @@ class Contents extends React.Component {
 
     render() {
         return (
-            <Content className="Contents" tiles={this.state.projects} onTileClick={(node) => this.handleModal(node)}/>
+            <Content className="Contents" tiles={this.state.projects} onTileClick={(node)=>this.handleModal(node)}/>
         );
     }
 }
