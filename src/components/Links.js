@@ -11,7 +11,7 @@ class Links extends React.Component {
 
         this.state = {
             icons : [ iconLinkedIn, iconGitHub, iconMail ],
-            links : [ "https://linkedin.com/in/jaredjpruett", "https://github.com/jaredjpruett", "/" ],
+            links : [ "https://linkedin.com/in/jaredjpruett", "https://github.com/shanktank", "/" ],
         };
     }
 

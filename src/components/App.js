@@ -17,6 +17,7 @@ class App extends React.Component {
                 <div id="div-right">
                     <Contents/>
                 </div>
+				<div id="div-disclaimer"><p>(Most images and videos are currently placeholders!)</p></div>
             </div>
         );
     }
