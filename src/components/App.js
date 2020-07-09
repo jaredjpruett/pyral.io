@@ -11,13 +11,9 @@ class App extends React.Component {
     render() {
         return (
             <div id="div-root">
-                <div id="div-left">
-                    <Links/>
-                </div>
-                <div id="div-right">
-                    <Contents/>
-                </div>
-				<div id="div-disclaimer"><p>(Most images and videos are currently placeholders!)</p></div>
+                <div id="div-left"><Links/></div>
+                <div id="div-right"><Contents/></div>
+                <div id="div-notice"><p>(Most images and videos are currently placeholders!)</p></div>
             </div>
         );
     }
